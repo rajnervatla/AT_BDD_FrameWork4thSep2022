@@ -11,5 +11,7 @@ Examples:
 |raj|1234|
 |Test|3434|
 |test2|222|
+|test3|777|
+|remotepush|333|
 
 
