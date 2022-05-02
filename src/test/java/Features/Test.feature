@@ -9,5 +9,6 @@ Then user navigate to the home page
 Examples:
 |username|password|
 |raj|1234|
+|Test|3434|
 
 
