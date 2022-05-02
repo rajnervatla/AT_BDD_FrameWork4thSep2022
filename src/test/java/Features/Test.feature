@@ -10,5 +10,6 @@ Examples:
 |username|password|
 |raj|1234|
 |Test|3434|
+|test2|222|
 
 
