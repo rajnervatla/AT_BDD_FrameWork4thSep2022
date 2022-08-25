@@ -56,6 +56,14 @@
 							</a>
 						</li>
 						<li>
+							<a href="exception.html">
+							<span class="nav-icon">
+							<i class="fa fa-warning"></i>
+							</span>
+							<span class="nav-text">Exceptions</span>
+							</a>
+						</li>
+						<li>
 							<a href="dashboard.html">
 							<span class="nav-icon">
 							<i class="fa fa-dashboard"></i>
@@ -104,7 +112,7 @@
 										
 										
 										
-										
+										<a class="dropdown-item" href="#"><span class="tf" status="skip"><i class="fa fa-dot-circle-o text-blue"></i>Skip</span></a>
 										<div class="dropdown-divider"></div>
 										<a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 									</div>
@@ -117,7 +125,8 @@
 								        </span>
 							        </a>
 							        <div class="dropdown-menu pt-0 mt-2 animate fadeIn">
-						    	        <a class="dropdown-item" href="#"><span class="cf">@test</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@tag</span></a>
+						    	        <a class="dropdown-item" href="#"><span class="cf">@tag1</span></a>
 						    	        <div class="dropdown-divider"></div>
 						    	        <a class="dropdown-item" href="#"><span class="tf" status="clear"><i class="fa fa-dot-circle-o text-warn"></i>Clear</span></a>
 						    	      </div>
@@ -134,15 +143,15 @@
 								<div class="col-md-8 col-sm-12">
 									<div class="logger-content">
 										<h6 class="mb-3 ml-1">Test Logs</h6>
-											<div class="tsc" status="pass">
-											<div class="st pass test l0" 
-												tags="@test"
+											<div class="tsc" status="skip">
+											<div class="st skip test l0" 
+												tags="@tag"
 												devices="">
-												<span class="tt">08.12.2022 16:18:57</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">[Login Test Functioality] started</span>
+												<span class="tt">08.25.2022 01:05:35</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">[Title of your feature] started</span>
 												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @test</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @tag</span>
 												</span>
 												<span class="author-list">
 												</span>
@@ -150,387 +159,128 @@
 												</span>
 												
 											</div>
-											<div class="st pass test l1" 
-												tags=""
+											<div class="st skip test l1" 
+												tags="@tag @tag1"
 												devices="">
-												<span class="tt">08.12.2022 16:18:57</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">|---[Verifying the login page with diffrent set of data] started</span>
+												<span class="tt">08.25.2022 01:05:35</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">|---[Title of your scenario] started</span>
+												<span class="category-list">
+													<span class="category badge"><i class="fa fa-tag"></i> @tag</span>
+													<span class="category badge"><i class="fa fa-tag"></i> @tag1</span>
+												</span>
+												<span class="author-list">
+												</span>
+												<span class="device-list">
+												</span>
 												
 											</div>
 											<div class="st pass test l2" 
-												tags="@test"
-												devices="">
-												<span class="tt">08.12.2022 16:18:57</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Verifying the login page with diffrent set of data] started</span>
-												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @test</span>
-												</span>
-												<span class="author-list">
-												</span>
-												<span class="device-list">
-												</span>
-												
-											</div>
-											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.12.2022 16:18:57</span>&nbsp;
+												<span class="tt">08.25.2022 01:05:35</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given User is Login page] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given I want to write a step with precondition] started</span>
 												
 												<div class="st pass">
-													<span class="tt">08.12.2022 16:18:57</span>&nbsp;
+													<span class="tt">08.25.2022 01:05:35</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given User is Login page]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l3" 
-												tags=""
-												devices="">
-												<span class="tt">08.12.2022 16:18:57</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user enters the rajand 1234] started</span>
-												
-												<div class="st pass">
-													<span class="tt">08.12.2022 16:18:58</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user enters the rajand 1234]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l3" 
-												tags=""
-												devices="">
-												<span class="tt">08.12.2022 16:18:58</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on login button] started</span>
-												
-												<div class="st pass">
-													<span class="tt">08.12.2022 16:18:59</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on login button]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l3" 
-												tags=""
-												devices="">
-												<span class="tt">08.12.2022 16:18:59</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user navigate to the home page] started</span>
-												
-												<div class="st pass">
-													<span class="tt">08.12.2022 16:18:59</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user navigate to the home page]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Given I want to write a step with precondition]</span>
 													
 													<span class="td"></span>
 												</div>
 											</div>
 											<div class="st pass test l2" 
-												tags="@test"
-												devices="">
-												<span class="tt">08.12.2022 16:19:02</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Verifying the login page with diffrent set of data] started</span>
-												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @test</span>
-												</span>
-												<span class="author-list">
-												</span>
-												<span class="device-list">
-												</span>
-												
-											</div>
-											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.12.2022 16:19:02</span>&nbsp;
+												<span class="tt">08.25.2022 01:05:35</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given User is Login page] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And some other precondition] started</span>
 												
 												<div class="st pass">
-													<span class="tt">08.12.2022 16:19:02</span>&nbsp;
+													<span class="tt">08.25.2022 01:05:35</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given User is Login page]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l3" 
-												tags=""
-												devices="">
-												<span class="tt">08.12.2022 16:19:02</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user enters the Testand 3434] started</span>
-												
-												<div class="st pass">
-													<span class="tt">08.12.2022 16:19:02</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user enters the Testand 3434]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l3" 
-												tags=""
-												devices="">
-												<span class="tt">08.12.2022 16:19:02</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on login button] started</span>
-												
-												<div class="st pass">
-													<span class="tt">08.12.2022 16:19:02</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on login button]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l3" 
-												tags=""
-												devices="">
-												<span class="tt">08.12.2022 16:19:02</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user navigate to the home page] started</span>
-												
-												<div class="st pass">
-													<span class="tt">08.12.2022 16:19:02</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user navigate to the home page]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And some other precondition]</span>
 													
 													<span class="td"></span>
 												</div>
 											</div>
 											<div class="st pass test l2" 
-												tags="@test"
-												devices="">
-												<span class="tt">08.12.2022 16:19:05</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Verifying the login page with diffrent set of data] started</span>
-												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @test</span>
-												</span>
-												<span class="author-list">
-												</span>
-												<span class="device-list">
-												</span>
-												
-											</div>
-											<div class="st pass test l3" 
 												tags=""
 												devices="">
-												<span class="tt">08.12.2022 16:19:05</span>&nbsp;
+												<span class="tt">08.25.2022 01:05:35</span>&nbsp;
 												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given User is Login page] started</span>
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When I complete action] started</span>
 												
 												<div class="st pass">
-													<span class="tt">08.12.2022 16:19:05</span>&nbsp;
+													<span class="tt">08.25.2022 01:05:35</span>&nbsp;
 													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given User is Login page]</span>
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[When I complete action]</span>
 													
 													<span class="td"></span>
 												</div>
 											</div>
-											<div class="st pass test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.12.2022 16:19:05</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user enters the test2and 222] started</span>
+												<span class="tt">08.25.2022 01:05:35</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And some other action] started</span>
 												
-												<div class="st pass">
-													<span class="tt">08.12.2022 16:19:06</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user enters the test2and 222]</span>
+												<div class="st skip">
+													<span class="tt">08.25.2022 01:05:35</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And some other action]</span>
 													
-													<span class="td"></span>
+													<span class="td">threw an exception<br><textarea disabled class="code-block">io.cucumber.java.PendingException: TODO: implement me
+	at Steps.ScenarioSteps.some_other_action(ScenarioSteps.java:27)
+	at ?.some other action(file:///C:/Users/rajne/EcommerceCucumberBDD/src/test/java/Features/ScenarioFile.feature:11)
+</textarea></span>
 												</div>
 											</div>
-											<div class="st pass test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.12.2022 16:19:06</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on login button] started</span>
+												<span class="tt">08.25.2022 01:05:35</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And yet another action] started</span>
 												
-												<div class="st pass">
-													<span class="tt">08.12.2022 16:19:06</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on login button]</span>
+												<div class="st skip">
+													<span class="tt">08.25.2022 01:05:35</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And yet another action]</span>
 													
-													<span class="td"></span>
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st pass test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.12.2022 16:19:06</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user navigate to the home page] started</span>
+												<span class="tt">08.25.2022 01:05:35</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then I validate the outcomes] started</span>
 												
-												<div class="st pass">
-													<span class="tt">08.12.2022 16:19:06</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user navigate to the home page]</span>
+												<div class="st skip">
+													<span class="tt">08.25.2022 01:05:35</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Then I validate the outcomes]</span>
 													
-													<span class="td"></span>
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
-											<div class="st pass test l2" 
-												tags="@test"
-												devices="">
-												<span class="tt">08.12.2022 16:19:09</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Verifying the login page with diffrent set of data] started</span>
-												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @test</span>
-												</span>
-												<span class="author-list">
-												</span>
-												<span class="device-list">
-												</span>
-												
-											</div>
-											<div class="st pass test l3" 
+											<div class="st skip test l2" 
 												tags=""
 												devices="">
-												<span class="tt">08.12.2022 16:19:09</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given User is Login page] started</span>
+												<span class="tt">08.25.2022 01:05:35</span>&nbsp;
+												<span class="ts">skip</span>&nbsp;&nbsp;
+												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And check more outcomes] started</span>
 												
-												<div class="st pass">
-													<span class="tt">08.12.2022 16:19:09</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given User is Login page]</span>
+												<div class="st skip">
+													<span class="tt">08.25.2022 01:05:35</span>&nbsp;
+													<span class="ts">skip</span>&nbsp;&nbsp; 
+													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[And check more outcomes]</span>
 													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l3" 
-												tags=""
-												devices="">
-												<span class="tt">08.12.2022 16:19:09</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user enters the test3and 777] started</span>
-												
-												<div class="st pass">
-													<span class="tt">08.12.2022 16:19:10</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user enters the test3and 777]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l3" 
-												tags=""
-												devices="">
-												<span class="tt">08.12.2022 16:19:10</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on login button] started</span>
-												
-												<div class="st pass">
-													<span class="tt">08.12.2022 16:19:10</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on login button]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l3" 
-												tags=""
-												devices="">
-												<span class="tt">08.12.2022 16:19:10</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user navigate to the home page] started</span>
-												
-												<div class="st pass">
-													<span class="tt">08.12.2022 16:19:10</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user navigate to the home page]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l2" 
-												tags="@test"
-												devices="">
-												<span class="tt">08.12.2022 16:19:13</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;|---[Verifying the login page with diffrent set of data] started</span>
-												<span class="category-list">
-													<span class="category badge"><i class="fa fa-tag"></i> @test</span>
-												</span>
-												<span class="author-list">
-												</span>
-												<span class="device-list">
-												</span>
-												
-											</div>
-											<div class="st pass test l3" 
-												tags=""
-												devices="">
-												<span class="tt">08.12.2022 16:19:13</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given User is Login page] started</span>
-												
-												<div class="st pass">
-													<span class="tt">08.12.2022 16:19:13</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Given User is Login page]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l3" 
-												tags=""
-												devices="">
-												<span class="tt">08.12.2022 16:19:13</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user enters the remotepushand 333] started</span>
-												
-												<div class="st pass">
-													<span class="tt">08.12.2022 16:19:13</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user enters the remotepushand 333]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l3" 
-												tags=""
-												devices="">
-												<span class="tt">08.12.2022 16:19:13</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on login button] started</span>
-												
-												<div class="st pass">
-													<span class="tt">08.12.2022 16:19:14</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[When user clicks on login button]</span>
-													
-													<span class="td"></span>
-												</div>
-											</div>
-											<div class="st pass test l3" 
-												tags=""
-												devices="">
-												<span class="tt">08.12.2022 16:19:14</span>&nbsp;
-												<span class="ts">pass</span>&nbsp;&nbsp;
-												<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user navigate to the home page] started</span>
-												
-												<div class="st pass">
-													<span class="tt">08.12.2022 16:19:14</span>&nbsp;
-													<span class="ts">pass</span>&nbsp;&nbsp; 
-													<span class="tn">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|---[Then user navigate to the home page]</span>
-													
-													<span class="td"></span>
+													<span class="td">Step skipped</span>
 												</div>
 											</div>
 											</div>
