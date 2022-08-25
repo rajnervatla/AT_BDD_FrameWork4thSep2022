@@ -18,6 +18,7 @@ Feature: Title of your feature
     Given I want to write a step with <name>
     When I check for the <value> in step
     Then I verify the <status> in step in git huub
+    When user is on the new branch
 
     Examples: 
       | name  | value | status  |
