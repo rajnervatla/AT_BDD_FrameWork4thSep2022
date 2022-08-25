@@ -48,6 +48,7 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
@@ -57,7 +58,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Aug 12, 2022 04:18:40 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Aug 25, 2022 01:05:25 AM</span>
 			</a>
 		</ul>
 	</div>
@@ -73,6 +74,7 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -84,7 +86,8 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@test</a></li>
+					<li><a href='#'>@tag</a></li>
+					<li><a href='#'>@tag1</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
 				</ul>
@@ -125,10 +128,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> feature(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> skipped
                 </div>
             </div>
         </div>
@@ -139,12 +142,12 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>5</span> scenario(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='0%'><span class='strong'>0</span> scenario(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>1</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='100%'>0</span> others
                 </div>
             </div>
         </div>
@@ -155,12 +158,12 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>20</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='42.857%'><span class='strong'>3</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='57.143%'>4</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='57.143%'>0</span> others
                 </div>
             </div>
         </div>
@@ -178,11 +181,11 @@
 </div>	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf skip' status='skip' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Login Test Functioality</span>
-						<span class='test-time'>Aug 12, 2022 04:18:57 PM</span>
-						<span class='test-status right pass'>pass</span>
+						<span class='test-name'>Title of your feature</span>
+						<span class='test-time'>Aug 25, 2022 01:05:35 AM</span>
+						<span class='test-status right skip'>skip</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -191,117 +194,47 @@
 	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
-<div class='scenario outline node' test-id='2' status='pass'>
-	<span class='duration right label'>0h 0m 16s+394ms</span>
+<div class='test-desc'>I want to use this template for my feature file</div>
+<div class='scenario node' test-id='2' status='skip'>
+	<div class='category-list'>
+		<span class='category label'>@tag</span>
+		<span class='category label'>@tag1</span>
+	</div>
+	<span class='duration right label'>0h 0m 0s+63ms</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario Outline: Verifying the login page with diffrent set of data</div>
-		<table class='runtime-table table-striped table'><tr><td>username</td><td>password</td></tr><tr><td>raj</td><td>1234</td></tr><tr><td>Test</td><td>3434</td></tr><tr><td>test2</td><td>222</td></tr><tr><td>test3</td><td>777</td></tr><tr><td>remotepush</td><td>333</td></tr></table>
+		<div class="scenario-name"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span> Scenario: Title of your scenario</div>
 	</div>
 	<ul class='steps'>
-		<li test-id='3' class='node scenario pass' status='pass'>
-			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Verifying the login page with diffrent set of data</div>
-			<ul class='gc steps'>
-				<li test-id='6' class='gc given pass' status='pass'>
-					<h6 class="step-name" title="Steps.StepDef_Login.user_is_login_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User is Login page</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='7' class='gc then pass' status='pass'>
-					<h6 class="step-name" title="Steps.StepDef_Login.user_enters_the_and(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user enters the rajand 1234</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='8' class='gc when pass' status='pass'>
-					<h6 class="step-name" title="Steps.StepDef_Login.user_clicks_on_login_button()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user clicks on login button</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='9' class='gc then pass' status='pass'>
-					<h6 class="step-name" title="Steps.StepDef_Login.user_navigate_to_the_home_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user navigate to the home page</h6>
-					<div class="node-step"></div>
-				</li>
-			</ul>
+		<li test-id='5' class='node given pass' status='pass'>
+			<div class="step-name" title="Steps.ScenarioSteps.i_want_to_write_a_step_with_precondition()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given I want to write a step with precondition</div>
+			<div class="node-step"></div>
 		</li>
-		<li test-id='12' class='node scenario pass' status='pass'>
-			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Verifying the login page with diffrent set of data</div>
-			<ul class='gc steps'>
-				<li test-id='15' class='gc given pass' status='pass'>
-					<h6 class="step-name" title="Steps.StepDef_Login.user_is_login_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User is Login page</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='16' class='gc then pass' status='pass'>
-					<h6 class="step-name" title="Steps.StepDef_Login.user_enters_the_and(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user enters the Testand 3434</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='17' class='gc when pass' status='pass'>
-					<h6 class="step-name" title="Steps.StepDef_Login.user_clicks_on_login_button()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user clicks on login button</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='18' class='gc then pass' status='pass'>
-					<h6 class="step-name" title="Steps.StepDef_Login.user_navigate_to_the_home_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user navigate to the home page</h6>
-					<div class="node-step"></div>
-				</li>
-			</ul>
+		<li test-id='6' class='node and pass' status='pass'>
+			<div class="step-name" title="Steps.ScenarioSteps.some_other_precondition()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And some other precondition</div>
+			<div class="node-step"></div>
 		</li>
-		<li test-id='21' class='node scenario pass' status='pass'>
-			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Verifying the login page with diffrent set of data</div>
-			<ul class='gc steps'>
-				<li test-id='24' class='gc given pass' status='pass'>
-					<h6 class="step-name" title="Steps.StepDef_Login.user_is_login_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User is Login page</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='25' class='gc then pass' status='pass'>
-					<h6 class="step-name" title="Steps.StepDef_Login.user_enters_the_and(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user enters the test2and 222</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='26' class='gc when pass' status='pass'>
-					<h6 class="step-name" title="Steps.StepDef_Login.user_clicks_on_login_button()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user clicks on login button</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='27' class='gc then pass' status='pass'>
-					<h6 class="step-name" title="Steps.StepDef_Login.user_navigate_to_the_home_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user navigate to the home page</h6>
-					<div class="node-step"></div>
-				</li>
-			</ul>
+		<li test-id='7' class='node when pass' status='pass'>
+			<div class="step-name" title="Steps.ScenarioSteps.i_complete_action()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When I complete action</div>
+			<div class="node-step"></div>
 		</li>
-		<li test-id='30' class='node scenario pass' status='pass'>
-			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Verifying the login page with diffrent set of data</div>
-			<ul class='gc steps'>
-				<li test-id='33' class='gc given pass' status='pass'>
-					<h6 class="step-name" title="Steps.StepDef_Login.user_is_login_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User is Login page</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='34' class='gc then pass' status='pass'>
-					<h6 class="step-name" title="Steps.StepDef_Login.user_enters_the_and(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user enters the test3and 777</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='35' class='gc when pass' status='pass'>
-					<h6 class="step-name" title="Steps.StepDef_Login.user_clicks_on_login_button()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user clicks on login button</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='36' class='gc then pass' status='pass'>
-					<h6 class="step-name" title="Steps.StepDef_Login.user_navigate_to_the_home_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user navigate to the home page</h6>
-					<div class="node-step"></div>
-				</li>
-			</ul>
+		<li test-id='8' class='node and skip' status='skip'>
+			<div class="step-name" title="Steps.ScenarioSteps.some_other_action()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And some other action</div>
+			<textarea disabled class="code-block">io.cucumber.java.PendingException: TODO: implement me
+	at Steps.ScenarioSteps.some_other_action(ScenarioSteps.java:27)
+	at ?.some other action(file:///C:/Users/rajne/EcommerceCucumberBDD/src/test/java/Features/ScenarioFile.feature:11)
+</textarea>
 		</li>
-		<li test-id='39' class='node scenario pass' status='pass'>
-			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Verifying the login page with diffrent set of data</div>
-			<ul class='gc steps'>
-				<li test-id='42' class='gc given pass' status='pass'>
-					<h6 class="step-name" title="Steps.StepDef_Login.user_is_login_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given User is Login page</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='43' class='gc then pass' status='pass'>
-					<h6 class="step-name" title="Steps.StepDef_Login.user_enters_the_and(java.lang.String,java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user enters the remotepushand 333</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='44' class='gc when pass' status='pass'>
-					<h6 class="step-name" title="Steps.StepDef_Login.user_clicks_on_login_button()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user clicks on login button</h6>
-					<div class="node-step"></div>
-				</li>
-				<li test-id='45' class='gc then pass' status='pass'>
-					<h6 class="step-name" title="Steps.StepDef_Login.user_navigate_to_the_home_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user navigate to the home page</h6>
-					<div class="node-step"></div>
-				</li>
-			</ul>
+		<li test-id='9' class='node and skip' status='skip'>
+			<div class="step-name" title="Steps.ScenarioSteps.yet_another_action()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And yet another action</div>
+			<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='10' class='node then skip' status='skip'>
+			<div class="step-name" title="Steps.ScenarioSteps.i_validate_the_outcomes()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then I validate the outcomes</div>
+			<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='11' class='node and skip' status='skip'>
+			<div class="step-name" title="Steps.ScenarioSteps.check_more_outcomes()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And check more outcomes</div>
+			<div class="node-step">Step skipped</div>
 		</li>
 	</ul>
 </div>
@@ -347,16 +280,16 @@
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@test</span>
+						<span class='category-name'>@tag</span>
 						<span class='category-status right'>
-						<span class='label pass'>5</span>
+						<span class='label others'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
-							<span status="pass" class='label green accent-4 white-text'>Passed: 5</span>
 							
 							
+							<span status="skip" class='label yellow darken-2 white-text'>Skipped: 1</span>
 						</div>
 						<div class='category-tests'>
 							<table class='bordered table-results'>
@@ -369,34 +302,47 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Aug 12, 2022 04:18:57 PM</td>
-										<td class='linked' test-id='1'>Login Test Functioality</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td>Aug 25, 2022 01:05:35 AM</td>
+										<td class='linked' test-id='1'>Title of your feature</td>
+										<td><span class='test-status skip'>skip</span></td>
 									</tr>
 									<tr>
-										<td>Aug 12, 2022 04:18:57 PM</td>
-										<td class='linked' test-id='3'>Verifying the login page with diffrent set of data</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td>Aug 25, 2022 01:05:35 AM</td>
+										<td class='linked' test-id='2'>Title of your scenario</td>
+										<td><span class='test-status skip'>skip</span></td>
 									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+				<li class='category displayed active'>
+					<div class='category-heading'>
+						<span class='category-name'>@tag1</span>
+						<span class='category-status right'>
+						<span class='label others'>1</span>
+						</span>
+					</div>
+					<div class='category-content hide'>
+						<div class='category-status-counts'>
+							
+							
+							<span status="skip" class='label yellow darken-2 white-text'>Skipped: 1</span>
+						</div>
+						<div class='category-tests'>
+							<table class='bordered table-results'>
+								<thead>
 									<tr>
-										<td>Aug 12, 2022 04:19:02 PM</td>
-										<td class='linked' test-id='12'>Verifying the login page with diffrent set of data</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
 									</tr>
+								</thead>
+								<tbody>
 									<tr>
-										<td>Aug 12, 2022 04:19:05 PM</td>
-										<td class='linked' test-id='21'>Verifying the login page with diffrent set of data</td>
-										<td><span class='test-status pass'>pass</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2022 04:19:09 PM</td>
-										<td class='linked' test-id='30'>Verifying the login page with diffrent set of data</td>
-										<td><span class='test-status pass'>pass</span></td>
-									</tr>
-									<tr>
-										<td>Aug 12, 2022 04:19:13 PM</td>
-										<td class='linked' test-id='39'>Verifying the login page with diffrent set of data</td>
-										<td><span class='test-status pass'>pass</span></td>
+										<td>Aug 25, 2022 01:05:35 AM</td>
+										<td class='linked' test-id='2'>Title of your scenario</td>
+										<td><span class='test-status skip'>skip</span></td>
 									</tr>
 								</tbody>
 							</table>
@@ -412,7 +358,65 @@
 		</div>
 	</div>
 </div>
-<!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+<!-- category view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>io.cucumber.java.PendingException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Aug 25, 2022 01:05:35 AM</td>
+										<td class='linked' test-id='8'>And some other action</td>
+										<td>
+											<textarea disabled class="code-block">io.cucumber.java.PendingException: TODO: implement me
+	at Steps.ScenarioSteps.some_other_action(ScenarioSteps.java:27)
+	at ?.some other action(file:///C:/Users/rajne/EcommerceCucumberBDD/src/test/java/Features/ScenarioFile.feature:11)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -426,31 +430,31 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>5</div>
+					<div class='panel-lead'>1</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>20</div>
+					<div class='panel-lead'>7</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Aug 12, 2022 04:18:40 PM</div>
+					<div class='panel-lead'>Aug 25, 2022 01:05:25 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Aug 12, 2022 04:19:14 PM</div>
+			 		<div class='panel-lead'>Aug 25, 2022 01:05:37 AM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 34s+455ms</div>
+					<div class='panel-lead'>0h 0m 12s+17ms</div>
 				</div>
 			</div>
 			<div class='col s6'>
@@ -466,12 +470,21 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@test</td>
-							<td>5</td>
+							<td>@tag</td>
 							<td>0</td>
 							<td>0</td>
+							<td>1</td>
 							<td>
-									83.333%
+									0%
+							</td>
+						</tr>
+						<tr>
+							<td>@tag1</td>
+							<td>0</td>
+							<td>0</td>
+							<td>1</td>
+							<td>
+									0%
 							</td>
 						</tr>
 					</table>
@@ -486,38 +499,38 @@
 		<script>
 			var statusGroup = {
                 parentCount: 1,
-				passParent: 1,
+				passParent: 0,
 				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
-				skipParent: 0,
-				exceptionsParent: 0,
-				childCount: 5,
-				passChild: 5,
+				skipParent: 1,
+				exceptionsParent: 1,
+				childCount: 1,
+				passChild: 0,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
-				skipChild: 0,
+				skipChild: 1,
 				infoChild: 0,
 				debugChild: 0,
-				exceptionsChild: 0,
-				grandChildCount: 20,
-				passGrandChild: 20,
+				exceptionsChild: 1,
+				grandChildCount: 7,
+				passGrandChild: 3,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 0,
+				skipGrandChild: 4,
 				infoGrandChild: 0,
 				debugGrandChild: 0,
-				exceptionsGrandChild: 0,
+				exceptionsGrandChild: 4,
 			};
 		</script>
 		<script>
 			var timeline = {
-			        "Login Test Functioality":16.394
+			        "Title of your feature":0.063
 			};
 		</script>
 	

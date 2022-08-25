@@ -103,7 +103,35 @@
 					<version>3.0.0-M3</version>
 					<configuration>
 						<includes>**/*Runner.java</includes>
+						<forkCount>3</forkCount>
+						<reuseForks>true</reuseForks>
 					</configuration>
+				</plugin>
+
+				<plugin>
+					<groupId>com.github.temyers</groupId>
+					<artifactId>cucumber-jvm-parallel-plugin</artifactId>
+					<version>5.0.0</version>
+					<executions>
+						<execution>
+							<id>generateRunners</id>
+							<phase>generate-test-sources</phase>
+							<goals>
+								<goal>generateRunners</goal>
+							</goals>
+							<configuration>
+								<!-- Mandatory -->
+								<!-- List of package names to scan for glue code. -->
+								<glue>
+									<package>Steps</package>
+									<package>com.example.other</package>
+								</glue>
+								<featuresDirectory>Features</featuresDirectory>
+								<tags>~@ignored</tags>
+								<cucumberOutputDir>targer/cucumber_parallel</cucumberOutputDir>
+							</configuration>
+						</execution>
+					</executions>
 				</plugin>
 			</plugins>
 		</pluginManagement>
